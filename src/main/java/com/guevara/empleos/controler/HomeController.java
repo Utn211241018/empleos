@@ -13,7 +13,6 @@ import com.guevara.empleos.model.Vacante;
 import com.guevara.empleos.service.IntCategorias;
 import com.guevara.empleos.service.InterfaceVacantes;
 
-@RequestMapping("/")
 @Controller
 public class HomeController {
 	
@@ -23,7 +22,7 @@ public class HomeController {
 	@Autowired
 	private IntCategorias serviceCategorias;
 	
-	@GetMapping("/home")
+	@GetMapping("/")
 	public String home(Model model) {
 		List<Vacante> lista = serviceVacantes.obtenerTodas();
 		List<Categoria> categorias = serviceCategorias.obtenerTodas();
